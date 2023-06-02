@@ -1,0 +1,116 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: antiquewhite;
+    align-items: center;
+    justify-content: center;
+}
+.container
+{
+    background-image: url("1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 60%;
+    border-radius: 15px;
+    margin: 20px auto;
+
+}
+h1
+{
+    margin:10px auto;
+    font-size: 40px;
+    font-weight: 400;
+    font-family: 'Lucida Sans';
+}
+ul
+{
+    list-style: none;
+}
+li
+{
+    background-color: black;
+    opacity: 0.7;
+    color: white;
+    font-family: 'Times New Roman';
+    padding: 5px 5px 5px 25px;
+    margin: 10px 10% 5px 10%;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    /* backdrop-filter: blur(20px); */
+}
+li::before
+{
+    content: "";
+    background-image:url("uncheck.png");
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    top:16%;
+    left: 0.5%;
+}
+li.checked
+{
+    text-decoration: line-through;
+}
+li.checked::before
+{
+    background-image: url("check.png");
+}
+#check
+{
+    height: 15px;
+    width: 15px;
+    
+}
+span
+{
+    position: absolute;
+    right: 10px;
+}
+.add_task
+{
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+    display: flex;
+    gap: 5%;
+    margin: auto;
+    width: 50%;
+}
+.add_task input
+{
+    border: none;
+    background-color: black;
+    color: white;
+    height: 30px;
+    width: 100%;
+    opacity: 0.6;
+    padding-left: 10px;
+    font-family: 'Times New Roman';
+}
+
+.add_task button
+{
+    border: none;
+    width: 20%;
+    /* background-color: ; */
+    font-size: 24px;
+    background-color: grey;
+    opacity: 0.8;
+}
+
