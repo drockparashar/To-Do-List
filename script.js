@@ -19,7 +19,7 @@ function addTask()
     let s=""
     for(let i=0;i<tasks.length;i++)
     {
-        s+=`<li>${tasks[i]}<span id="cross"><img src="cross.png" id="check"></span></li>`
+        s+=`<li>${tasks[i]}<span id="cross">\u00d7</span></li>`
     }
     listEl.innerHTML=s
 }
@@ -33,9 +33,9 @@ listEl.addEventListener("click",(e)=>
         e.target.classList.toggle("checked");
         audioElement.play()
     }
-    else if(e.target.id=="checked")
+    else if(e.target.id=="cross")
     {
-        console.log("HII")
+        console.log(e.target.parentElement)
         e.target.parentElement.remove();
     }
 });
